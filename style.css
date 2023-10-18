@@ -1,0 +1,100 @@
+:root {
+    --dark: #6422EE;
+    --yellow: #FDB934;
+    --white: #FFFFFF;
+    
+    --left-color: var(--dark);
+    --right-color: var(--yellow);
+}
+
+  
+body {  
+    background-color: var(--dark);
+    margin: 0px;
+}
+
+.side {
+    display: grid;
+    height: 100vh;
+    overflow: hidden;
+    place-items: center;
+    position: absolute;
+    width: 100%;
+}
+  
+.side .title {
+    font-family: "Rubik", sans-serif;
+    font-size: 4vw;
+    font-weight: 600;
+    margin: 0px 25vw;
+    width: 60vw;
+}
+  
+.side .fancy {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.4em;
+    line-height: 0.6em;
+}
+  
+#left-side {
+    background-color: var(--left-color);
+    width: 60%;
+    z-index: 2;
+}
+  
+#left-side .title {  
+    color: var(--white);  
+}
+  
+#left-side .fancy {
+    color: var(--right-color);
+}
+  
+#right-side {
+    background-color: var(--right-color);
+}
+  
+#right-side .title {
+    color: var(--dark);
+}
+  
+#right-side .fancy {
+    color: var(--white);
+}
+
+.site-menu {
+    top: 0px;
+    font-family: "Rubik", sans-serif;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 20;
+    height: 70px;
+
+}
+
+.site-name {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+.site-url {
+    text-decoration: none;
+    color: var(--white);
+    font-size: .8rem;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 10px;
+    transition: background-color .2s ease;
+    background-color: rgba(0, 0, 0, .2);
+    backdrop-filter: blur(3px);
+}
+
+.site-url:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
